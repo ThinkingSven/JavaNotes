@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-size: calc(8px + 0.33vw);
+  -webkit-font-smoothing: antialiased;
+  padding: 0vh 20vw;
+  color: #ffffff;
+  background-color: #001e26;
+  font-family: System-UI;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  font-weight: bolder;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h2{
+  font-size: 36px;
+}
+p, li {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  max-width: 28em;
+  margin-bottom: 26px;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+a:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 60%;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: 0;
+  transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  background-color: #00dc809a;
+}
+.button {
+  background-color: #00dc82;
+  color: black;
+  width: 150px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+.recent{
+  background-color: #00dc8071;
+  width: 30vw;
+  padding: 10px;
+  font-size: 1rem;
+  border: #2cffa7;
+  border: 1px solid #00dc82;
+}
+a:hover:after {
+  top: 0%;
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  p {
+    font-size: 1rem;
   }
 }
